@@ -22,13 +22,13 @@ const Results = ({ results }) => {
             {results.lapDetails && results.lapDetails.length > 0 && (
                 <div className="lap-details">
                     <h3>Lap Details</h3>
-                    <ul>
+                    <div>
                         {results.lapDetails.map((lap, index) => (
-                            <li key={index}>
-                                Lap {lap.lapNumber}: {lap.formattedDuration} at {lap.time.toLocaleString()}
-                            </li>
+                            <div key={index}>
+                                Lap {lap.lapNumber}: {lap.formattedDuration} at {lap.time?.toLocaleString()}
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             )}
         </div>

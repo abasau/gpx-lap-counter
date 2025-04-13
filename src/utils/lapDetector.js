@@ -81,7 +81,7 @@ const countLaps = (points, thresholdDistance = 25) => {
         return {
             lapNumber: lapIndex + 1,
             pointIndex: pointIndex,
-            time: lapTime,
+            time: lapTime || 'unknown',
             durationSeconds: lapDuration,
             formattedDuration: lapDuration ? formatTime(lapDuration) : 'unknown'
         };

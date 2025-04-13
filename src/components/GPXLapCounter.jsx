@@ -38,9 +38,9 @@ const GPXLapCounter = () => {
             try {
                 const allPoints = removeDuplicatePoints(parseGPX(e.target.result));
                 const { circularPaths } = separateCircularPaths(allPoints);
+                const data = countLaps(circularPaths, 10);
                 setTrack(allPoints);
                 setCircularPaths(circularPaths);
-                const data = countLaps(circularPaths, 10);
                 setResults(data);
             } catch (err) {
                 setError(err.message);
@@ -68,6 +68,7 @@ const GPXLapCounter = () => {
                     <div className="map-section">
                         <h2>Entire Path</h2>
                         <Map track={track} lapPoints={[]} />
+                        <h2>Laps</h2>
                         <Map track={circularPaths} lapPoints={results.lapPoints} />
                         <Results results={results} />
                     </div>
