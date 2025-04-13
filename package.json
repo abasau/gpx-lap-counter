@@ -1,0 +1,33 @@
+{
+  "name": "gpx-lap-counter",
+  "version": "1.0.0",
+  "description": "A React application for analyzing GPX files and counting laps.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "gpxparser": "^3.0.8",
+    "leaflet": "^1.9.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-leaflet": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "prop-types": "^15.8.1",
+    "vite": "^5.1.0",
+    "vitest": "^1.2.0"
+  },
+  "keywords": [
+    "gpx",
+    "lap",
+    "counter",
+    "react"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
